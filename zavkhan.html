@@ -1,0 +1,211 @@
+<!doctype html>
+
+<html lang="mn">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJXHT3K6J7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-JJXHT3K6J7');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Covid-19 мэдээлэлийн самбар.">
+	<meta name="author" content="Ojomojoyolo">
+	
+	<title>Covid Самбар</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/124fb15106.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="aimag-nav disappear" id="aimagNav">
+		<header>
+			<div class="title-container">
+				<h1>Covid Самбар</h1>
+			</div>
+			
+			<div class="search-container">
+				<a id="close-btn" style="display: flex; align-items: center;">Хаах<i style="font-size: 175%; margin-left: 5px;" class="fas fa-times"></i></a>
+			</div>
+		</header>
+
+		<div class="stoplights-title">
+			Аймагийн мэдээлэлүүд:
+		</div>
+
+		<div class="aimag-table-container">
+			<div class="aimag-table">
+				<ul>
+					<li><a href="arkhangai.html">Архангай аймаг</a></li>
+					<li><a href="baynkhongor.html">Баянхонгор аймаг</a></li>
+					<li><a href="baynulgii.html">Баян-Өлгий аймаг</a></li>
+					<li><a href="bulgan.html">Булган аймаг</a></li>
+					<li><a href="gobialtai.html">Говь-Алтай аймаг</a></li>
+					<li><a href="gobisumber.html">Говьсүмбэр аймаг</a></li>
+					<li><a href="darhanuul.html">Дархан-Уул аймаг</a></li>
+					<li><a href="dornod.html">Дорнод аймаг</a></li>
+					<li><a href="dornnogobi.html">Дорноговь аймаг</a></li>
+					<li><a href="dundgobi.html">Дундговь аймаг</a></li>
+					<li><a href="zavkhan.html">Завхан аймаг</a></li>
+					<li><a href="orkhon.html">Орхон аймаг</a></li>
+					<li><a href="umnugobi.html">Өмнөговь аймаг</a></li>
+					<li><a href="uvurkhangai.html">Өвөрхангай аймаг</a></li>	
+					<li><a href="selenge.html">Сэлэнгэ аймаг</a></li>			
+					<li><a href="sukhbaatar.html">Сүхбаатар аймаг</a></li>			
+					<li><a href="tuv.html">Төв аймаг</a></li>
+					<li><a href="index.html">Улаанбаатар аймаг</a></li>				
+					<li><a href="uvs.html">Увс аймаг</a></li>			
+					<li><a href="khentii.html">Хэнтий аймаг</a></li>			
+					<li><a href="khovd.html">Ховд аймаг</a></li>
+					<li><a href="khuvsgul.html">Хөвсгөл аймаг</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<main>
+		<header>
+			<div class="title-container">
+				<h1>Covid Самбар</h1>
+			</div>
+			
+			<div class="search-container">
+				<a id="aimagOpen" style="display: flex; align-items: center;">Аймаг<i style="font-size: 150%; margin-left: 5px;" class="fas fa-search"></i></a>
+			</div>
+		</header>
+		<div class="stoplights-title">
+			Монгол улсад:
+		</div>
+		<div class="stoplights-container">
+			<div class="stoplights">
+				<div class="stat-container r">
+					<div class="stat">Батлагдсан:</div>
+					<div class="data" id="confirmed-total">...</div>
+				</div>
+				<div class="stat-container g">
+					<div class="stat">Эдгэрэлт:</div>
+					<div class="data" id="recovered-total">...</div>
+				</div>
+				<div class="stat-container y">
+					<div class="stat">Нас барсан:</div>
+					<div class="data" id="deceased-total">...</div>
+				</div>
+			</div>
+		</div>
+		<div class="geography">
+			<div class="map-container">
+				<img src="img/zavkhan-min.jpg" alt="Mongolian map">
+			</div>
+		</div>
+		<div class="region-container">
+			<div class="region-title-container">
+				<h1>Завхан аймаг</h1>
+			</div>
+			<div class="row">
+				<div class="stat-container red-stat">
+					<div class="stat">Батлагдсан:</div>
+					<div class="data" id="confirmed-region">...</div>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 100px;">
+				<div class="stat-container small green-stat">
+					<div class="stat">Эдгэрэлт:</div>
+					<div class="data" id="recovered-region">...</div>
+				</div>
+				<div class="stat-container small yellow-stat">
+					<div class="stat">Нас барсан:</div>
+					<div class="data" id="deceased-region">...</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Мэдээлэлийг Эрүүл мэндийн яамы <a href="https://covid19.mohs.mn/">сайтнаас</a> авав.</p>
+		</div>
+	</main>
+
+	<script type="text/javascript">
+		var apiUrl = 'https://2ei0ro.deta.dev/aimag?q=12';
+
+		fetch(apiUrl).then(response => {
+		  return response.json();
+		}).then(data => {
+			document.getElementById("confirmed-region").textContent=data['confirmed'];
+			document.getElementById("recovered-region").textContent=data['recovered'];
+			document.getElementById("deceased-region").textContent=data['deceased'];
+		}).catch(err => {	
+			document.getElementById("confirmed-region").textContent="Error";
+			document.getElementById("recovered-region").textContent="Error";
+			document.getElementById("deceased-region").textContent="Error";
+		});
+
+		var apiUrl = 'https://api.covid19api.com/country/mongolia/status/confirmed?from=2020-11-29T00:00:00Z';
+
+		fetch(apiUrl).then(response => {
+		  return response.json();
+		}).then(data => {
+			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+
+		}).catch(err => {
+			document.getElementById("confirmed-total").textContent="Error";
+			
+		});
+
+		var apiUrl = 'https://api.covid19api.com/country/mongolia/status/recovered?from=2020-11-29T00:00:00Z';
+
+		fetch(apiUrl).then(response => {
+		  return response.json();
+		}).then(data => {
+			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+
+		}).catch(err => {
+			document.getElementById("recovered-total").textContent="Error";
+
+		});
+
+		var apiUrl = 'https://api.covid19api.com/country/mongolia/status/deaths?from=2020-11-29T00:00:00Z';
+
+		fetch(apiUrl).then(response => {
+		  return response.json();
+		}).then(data => {
+			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+
+		}).catch(err => {
+			document.getElementById("deceased-total").textContent="Error";
+		});
+
+		var aimagBtn = document.getElementById("aimagOpen");
+		aimagBtn.addEventListener("click", openAimag);
+
+		var closeBtn = document.getElementById("close-btn");
+		closeBtn.addEventListener("click", closeAimag);
+
+		function openAimag() {
+			let mainElement = document.querySelector("main");
+			mainElement.classList.add("disappear");
+
+			let aimagElement = document.querySelector("#aimagNav");
+			aimagElement.classList.remove("disappear");
+		}
+
+		function closeAimag() {
+			let mainElement = document.querySelector("main");
+			mainElement.classList.remove("disappear");
+
+			let aimagElement = document.querySelector("#aimagNav");
+			aimagElement.classList.add("disappear");
+		}
+	</script>
+</body>
+</html>
