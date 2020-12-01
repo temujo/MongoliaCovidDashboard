@@ -1,0 +1,189 @@
+/*
+Primary colour: #1E1E1E
+Secondary colour: #252526
+*/
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+  
+html,
+body {
+    background-color: #252526;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  
+}
+
+
+header {
+    background-color: #1E1E1E;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .title-container {
+    float: left;
+    padding: 15px 0 15px 5%;
+}
+
+header .title-container h1 {
+    color: #E84855;
+    font-size: 200%;
+    font-weight: 400;
+}
+
+header .search-container {
+    color: white;
+    padding: 15px 5% 15px 0;
+
+    float: right;
+}
+
+
+.stoplights {
+    width: 100%;
+    
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stoplights .stat-container {
+    width: 100px;
+    padding: 3px 15px;
+    margin: 0 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.red-stat {
+    color: white;
+    background-color: #E84855;
+}
+
+.green-stat {
+    color: white;
+    background-color: #86A677;
+}
+
+.yellow-stat {
+    color: white;
+    background-color: #595959;
+}
+
+.stoplights .stat-container .stat {
+    font-size: 75%
+}
+
+.stoplights .stat-container .data {
+    margin-top: 5px;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+
+.geography {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container {
+    width: 90%;
+    height: auto;
+    
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.region-title-container {
+    margin-top: 5%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.region-title-container h1 {
+    font-size: 250%;
+    font-weight: 400;
+    color: #E84855;
+    padding-bottom: 2px;
+    border-bottom: #E84855 solid 2px;
+}
+
+.row {
+    width: 100%;
+    margin-top: 10%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.stat-container {
+    width: 80%;
+    padding:5px 15px;
+    margin: 0 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small {
+    width: 38%;
+}
+
+.stat-container .data {
+    margin-top: 5%;
+    font-weight: 700;
+    font-size: 250%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: rgb(107, 101, 101);
+    text-align: center;
+
+    padding: 20px 0;
+ }
+
+a:link,
+a:visited {
+    color: #E84855;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #E84855;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
