@@ -133,8 +133,8 @@ header .search-container {
 .map-container {
     width: 90%;
     height: auto;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .map-container img {
