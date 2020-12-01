@@ -49,7 +49,7 @@ header .search-container {
 }
 
 
-.stoplights {
+.stoplights-container {
     width: 100%;
     
     margin-top: 10px;
@@ -59,14 +59,24 @@ header .search-container {
     align-items: center;
 }
 
+.stoplights {
+    border-radius: 10px;
+    width: 88%;
+    background-color: #ccc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .stoplights .stat-container {
-    width: 100px;
-    padding: 3px 15px;
+    width: 150px;
+    padding: 3px 0;
     margin: 0 2%;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .red-stat {
@@ -85,13 +95,25 @@ header .search-container {
 }
 
 .stoplights .stat-container .stat {
-    font-size: 75%
+    font-size: 80%
 }
 
 .stoplights .stat-container .data {
     margin-top: 5px;
-    font-size: 150%;
+    font-size: 115%;
     font-weight: 700;
+}
+
+.r {
+    color: #E84855;
+
+}
+.y {
+    color: #595959;
+
+}
+.g {
+    color: #719461;
 }
 
 

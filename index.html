@@ -29,18 +29,20 @@
 	</header>
 
 	<main>
-		<div class="stoplights">
-			<div class="stat-container red-stat">
-				<div class="stat">Батлагдсан:</div>
-				<div class="data" id="confirmed-total">...</div>
-			</div>
-			<div class="stat-container green-stat">
-				<div class="stat">Эдгэрэлт:</div>
-				<div class="data" id="recovered-total">...</div>
-			</div>
-			<div class="stat-container yellow-stat">
-				<div class="stat">Нас барсан:</div>
-				<div class="data" id="deceased-total">...</div>
+		<div class="stoplights-container">
+			<div class="stoplights">
+				<div class="stat-container r">
+					<div class="stat">Батлагдсан:</div>
+					<div class="data" id="confirmed-total">...</div>
+				</div>
+				<div class="stat-container g">
+					<div class="stat">Эдгэрэлт:</div>
+					<div class="data" id="recovered-total">...</div>
+				</div>
+				<div class="stat-container y">
+					<div class="stat">Нас барсан:</div>
+					<div class="data" id="deceased-total">...</div>
+				</div>
 			</div>
 		</div>
 		<div class="geography">
@@ -95,7 +97,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"];
+			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
 
 		}).catch(err => {
 			document.getElementById("confirmed-total").textContent="Error";
@@ -107,7 +109,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"];
+			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
 
 		}).catch(err => {
 			document.getElementById("recovered-total").textContent="Error";
@@ -119,7 +121,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"];
+			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
 
 		}).catch(err => {
 			document.getElementById("deceased-total").textContent="Error";
