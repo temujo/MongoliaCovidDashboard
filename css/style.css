@@ -207,7 +207,7 @@ a:visited {
     color: #E84855;
     text-decoration: none;
     padding-bottom: 1px;
-    border-bottom: 1px solid #E84855;
+    /* border-bottom: 1px solid #E84855; */
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
@@ -215,7 +215,7 @@ a:visited {
 a:hover,
 a:active {
     color: #555;
-    border-bottom: 1px solid transparent;
+    /* border-bottom: 1px solid transparent; */
 }
 
 .aimag-nav {
