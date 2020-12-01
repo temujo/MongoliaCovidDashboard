@@ -88,7 +88,7 @@
 			<div class="lol">
 				<div class="eh">
 					<div class="stoplights-title">
-						Монгол улсад:
+						Монгол улсад нийт:
 					</div>
 					<div class="stoplights-container">
 						<div class="stoplights">
@@ -162,7 +162,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
 			document.getElementById("confirmed-total").textContent="Error";
@@ -174,7 +174,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
 			document.getElementById("recovered-total").textContent="Error";
@@ -186,7 +186,7 @@
 		fetch(apiUrl).then(response => {
 		  return response.json();
 		}).then(data => {
-			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"]+ " нийт";
+			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
 			document.getElementById("deceased-total").textContent="Error";

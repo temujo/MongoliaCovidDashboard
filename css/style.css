@@ -101,12 +101,12 @@ header .search-container {
 }
 
 .stoplights .stat-container .stat {
-    font-size: 80%
+    font-size: 90%
 }
 
 .stoplights .stat-container .data {
     margin-top: 5px;
-    font-size: 115%;
+    font-size: 150%;
     font-weight: 700;
 }
 
