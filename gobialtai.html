@@ -124,7 +124,7 @@
 							<div class="data" id="confirmed-region">...</div>
 						</div>
 					</div>
-					<div class="row" style="margin-bottom: 100px;">
+					<div class="row">
 						<div class="stat-container small green-stat">
 							<div class="stat">Эдгэрэлт:</div>
 							<div class="data" id="recovered-region">...</div>
@@ -139,6 +139,44 @@
 		</div>
 		
 
+		
+		<div class="table-wrapper">
+			<div class="table-title">
+				<h3>Хамгийн их батлагдсан халдвартай бүс:</h3>
+			</div>
+		</div>
+		<div class="table-wrapper">
+			<table class="table-fill">
+				<thead>
+					<tr>
+						<th class="text-left">Газар</th>
+						<th class="text-left">Тоо</th>
+					</tr>
+				</thead>
+				<tbody class="table-hover">
+					<tr>
+						<td class="text-left" id="gazar1">...</td>
+						<td class="text-left" id="too1">...</td>
+					</tr>
+					<tr>
+						<td class="text-left" id="gazar2">...</td>
+						<td class="text-left" id="too2">...</td>
+					</tr>
+					<tr>
+						<td class="text-left" id="gazar3">...</td>
+						<td class="text-left" id="too3">...</td>
+					</tr>
+					<tr>
+						<td class="text-left" id="gazar4">...</td>
+						<td class="text-left" id="too4">...</td>
+					</tr>
+					<tr>
+						<td class="text-left" id="gazar5">...</td>
+						<td class="text-left" id="too5">...</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="footer">
 			<p>Мэдээлэлийг Эрүүл мэндийн яамы <a href="https://covid19.mohs.mn/">сайтнаас</a> авав.</p>
 		</div>
@@ -154,9 +192,9 @@
 			document.getElementById("recovered-region").textContent=data['recovered'];
 			document.getElementById("deceased-region").textContent=data['deceased'];
 		}).catch(err => {	
-			document.getElementById("confirmed-region").textContent="Error";
-			document.getElementById("recovered-region").textContent="Error";
-			document.getElementById("deceased-region").textContent="Error";
+			document.getElementById("confirmed-region").textContent="Алдаа!";
+			document.getElementById("recovered-region").textContent="Алдаа!";
+			document.getElementById("deceased-region").textContent="Алдаа!";
 		});
 
 		var apiUrl = 'https://api.covid19api.com/country/mongolia/status/confirmed?from=2020-11-29T00:00:00Z';
@@ -167,7 +205,7 @@
 			document.getElementById("confirmed-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
-			document.getElementById("confirmed-total").textContent="Error";
+			document.getElementById("confirmed-total").textContent="Алдаа!";
 			
 		});
 
@@ -179,7 +217,7 @@
 			document.getElementById("recovered-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
-			document.getElementById("recovered-total").textContent="Error";
+			document.getElementById("recovered-total").textContent="Алдаа!";
 
 		});
 
@@ -191,7 +229,7 @@
 			document.getElementById("deceased-total").textContent=data[data.length - 1]["Cases"];
 
 		}).catch(err => {
-			document.getElementById("deceased-total").textContent="Error";
+			document.getElementById("deceased-total").textContent="Алдаа!";
 		});
 
 		var aimagBtn = document.getElementById("aimagOpen");
@@ -215,6 +253,41 @@
 			let aimagElement = document.querySelector("#aimagNav");
 			aimagElement.classList.add("disappear");
 		}
+	
+		var apiUrl = 'https://2ei0ro.deta.dev/aimag/all';
+
+		fetch(apiUrl).then(response => {
+			return response.json();
+		}).then(data => {
+			data = data['data']
+			data.sort((a, b) => {
+				return b.confirmed - a.confirmed;
+			});
+			document.getElementById("gazar1").textContent=data[0]['aimag_mng'];
+			document.getElementById("gazar2").textContent=data[1]['aimag_mng'];
+			document.getElementById("gazar3").textContent=data[2]['aimag_mng'];
+			document.getElementById("gazar4").textContent=data[3]['aimag_mng'];
+			document.getElementById("gazar5").textContent=data[4]['aimag_mng'];
+
+			document.getElementById("too1").textContent=data[0]['confirmed'];
+			document.getElementById("too2").textContent=data[1]['confirmed'];
+			document.getElementById("too3").textContent=data[2]['confirmed'];
+			document.getElementById("too4").textContent=data[3]['confirmed'];
+			document.getElementById("too5").textContent=data[4]['confirmed'];
+		}).catch(err => {
+			console.log(err)	
+			document.getElementById("gazar1").textContent="Алдаа!";
+			document.getElementById("gazar2").textContent="Алдаа!";
+			document.getElementById("gazar3").textContent="Алдаа!";
+			document.getElementById("gazar4").textContent="Алдаа!";
+			document.getElementById("gazar5").textContent="Алдаа!";
+
+			document.getElementById("too1").textContent="Алдаа!";
+			document.getElementById("too2").textContent="Алдаа!";
+			document.getElementById("too3").textContent="Алдаа!";
+			document.getElementById("too4").textContent="Алдаа!";
+			document.getElementById("too5").textContent="Алдаа!";
+		});
 	</script>
 </body>
 </html>
