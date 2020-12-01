@@ -49,10 +49,15 @@ header .search-container {
 }
 
 
+.stoplights-title {
+    color: #ccc;
+    margin: 10px 0 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
 .stoplights-container {
     width: 100%;
-    
-    margin-top: 10px;
 
     display: flex;
     justify-content: center;
