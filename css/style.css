@@ -21,7 +21,6 @@ body {
   
 }
 
-
 header {
     background-color: #1E1E1E;
     width: 100%;
@@ -161,6 +160,7 @@ header .search-container {
 }
 
 .footer {
+    font-size: 75%;
     position: fixed;
     left: 0;
     bottom: 0;
